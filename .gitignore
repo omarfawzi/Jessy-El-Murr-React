@@ -19,6 +19,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 
 # intellij files
 /.idea
+=======
+>>>>>>> af6c64ecb02a5c7670622a402da41508bcc0fdb3
