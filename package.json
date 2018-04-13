@@ -1,0 +1,33 @@
+{
+  "name": "jessyreact",
+  "version": "1.0.0",
+  "description": "jessy frontside",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarfawzi/Jessy-El-Murr-React.git"
+  },
+  "author": "CodeBully",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omarfawzi/Jessy-El-Murr-React/issues"
+  },
+  "homepage": "https://github.com/omarfawzi/Jessy-El-Murr-React#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2018": "^1.0.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "webpack-cli": "^2.0.14"
+  },
+  "devDependencies": {
+    "webpack": "^4.5.0",
+    "webpack-dev-server": "^3.1.3"
+  }
+}
