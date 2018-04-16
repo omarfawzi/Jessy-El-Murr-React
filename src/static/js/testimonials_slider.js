@@ -25,8 +25,8 @@ testimonials.slick({
     ],
     arrows:true,
     appendArrows:$('#testimonials_arrows'),
-    prevArrow:'<a href="javascript:;"><img src="./img/arrow-left.png"></a>',
-    nextArrow:'<a href="javascript:;"><img src="./img/arrow-right.png"></a>',
+    prevArrow:'<a href="javascript:;"><img src="../img/arrow-left.png"></a>',
+    nextArrow:'<a href="javascript:;"><img src="../img/arrow-right.png"></a>',
     infinite:true
 });
 
