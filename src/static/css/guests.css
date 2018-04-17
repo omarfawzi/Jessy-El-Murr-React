@@ -55,11 +55,15 @@
 }
 
 .balls-center{
-  background-image: url("../img/balls-center.jpg");
+  background-image: url("../img/bc.png");
   /*background-size: 949px 1520px;*/
   background-repeat: no-repeat;
   background-position:center;
   padding-bottom:100px;
   padding-top:100px;
     background-size: 74%;
+}
+
+.guests_card_image{
+  border-radius:7.25rem !important
 }
