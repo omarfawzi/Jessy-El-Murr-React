@@ -146,3 +146,16 @@ figcaption {
     height: 1px;
     margin-bottom: -3px;
 }
+
+.videos_viewMoreButton {
+    background-color: #FFFFFF;
+    margin-top: 2%;
+    margin-left: -4%;
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+    background: linear-gradient(to right, rgba(25, 118, 210, 1), rgba(108, 18, 211, 1));
+    border-radius: 4.3rem !important;
+    padding: 0.8rem 2rem !important;
+    box-shadow: 0 0 43px 0 rgba(0, 0, 0, 0.5);
+    position: absolute;
+}

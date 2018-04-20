@@ -34,6 +34,11 @@ export default class VideosComponent extends React.Component {
 
                     </div>
                 </div>
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <button type="button" className="btn-lg videos_viewMoreButton border-0">View More</button>
+                    </div>
+                </div>
             </section>
         );
     }
