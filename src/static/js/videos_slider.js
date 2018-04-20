@@ -7,7 +7,7 @@ videos.slick({
         {
             breakpoint: 1100,
             settings: {
-                arrows: true,
+                arrows: false,
                 centerMode: true,
                 centerPadding: '0%',
                 slidesToShow: 2
@@ -25,8 +25,8 @@ videos.slick({
     ],
     arrows:true,
     appendArrows:$('#videos_arrows'),
-    prevArrow: '<a href="javascript:;"><img src="/src/static/img/vector-smart-object-copy-3.png" style="width:8%;margin-right: 8px;"></a>',
-    nextArrow: '<a href="javascript:;"><img src="/src/static/img/arrow-right.png" style="width:5.3%;"></a>',
+    prevArrow: '<a href="javascript:;"><img src="/src/static/img/vector-smart-object-copy-3.png" style="width:4%;margin-right: 46%;"></a>',
+    nextArrow: '<a href="javascript:;"><img src="/src/static/img/arrow-right.png" style="width:2.6%;"></a>',
     infinite:true
 });
 

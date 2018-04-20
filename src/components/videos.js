@@ -80,7 +80,7 @@ export default class Videos extends React.Component {
                 <br/>
                 <br/>
                 <div className="row">
-                    <div id="videos_arrows" className="videos-arrows col-centered">
+                    <div id="videos_arrows" className="videos-arrows col-md-12">
 
                     </div>
                 </div>

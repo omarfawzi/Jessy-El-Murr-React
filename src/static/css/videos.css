@@ -130,9 +130,9 @@ figcaption {
 .videos-arrows {
     text-align: center;
     /*letter-spacing: 38.29vw;*/
-    /*top: 58%;*/
+    top: 58%;
     /*left: 25%;*/
-    /*position: absolute;*/
+    position: absolute;
 }
 
 .videos-first-child {
