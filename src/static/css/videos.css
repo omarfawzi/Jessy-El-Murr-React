@@ -1,13 +1,14 @@
-.balls-left{
+.balls-left {
     background-image: url("../img/vector-smart-object-copy-9.png");
     /*background-size: 949px 1520px;*/
     background-repeat: no-repeat;
-    background-position:left;
-    padding-bottom:100px;
-    padding-top:100px;
+    background-position: left;
+    padding-bottom: 100px;
+    padding-top: 100px;
     background-size: 39%;
 }
-.videos{
+
+.videos {
     font-family: 'Lato', sans-serif;
     font-size: 72px;
     font-weight: 900;
@@ -23,14 +24,16 @@
     background-image: linear-gradient(318deg, #6c12d3, #4a62dc);
 }
 
-.videos-img{
+.videos-img {
     /*width: 1011px;*/
     /*height: 230px;*/
     /*max-width: 111% !important;*/
 }
-.container-opacity{
+
+.container-opacity {
     opacity: 1.5 !important;
 }
+
 .video-title {
     font-family: 'Lato', sans-serif;
     font-size: 22px;
@@ -43,36 +46,38 @@
     color: #ffffff;
 
 }
-.videos-opacity > .slick-list >.slick-track > .slick-slide:nth-child(even) {
+
+.videos-opacity > .slick-list > .slick-track > .slick-slide:nth-child(even) {
     opacity: 0.5;
 }
+
 /*.videos-opacity > div:nth-child(1) {*/
-    /*opacity: 0.5;*/
+/*opacity: 0.5;*/
 /*}*/
 /*.videos-opacity > div:nth-child(3) {*/
-    /*opacity: 0.5;*/
+/*opacity: 0.5;*/
 /*}*/
-.padding-0{
-    padding-right:0;
-    padding-left:0;
+.padding-0 {
+    padding-right: 0;
+    padding-left: 0;
 }
 
-
 figcaption {
-    position : absolute;
-    z-index  : 1;
-    left      : 0;
-    bottom    : 0;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
     /*width    : 200px;*/
     /*height   : 240px;*/
     /*background : #000;*/
-    background-color: rgb(91,62,216,0.5);
+    background-color: rgb(91, 62, 216, 0.5);
     /*background-color: #5b3ed8;*/
     width: 69%;
     height: 38%;
     /*opacity: 0.5;*/
 
 }
+
 .video-img-first-child {
     position: absolute;
     top: 34%;
@@ -87,7 +92,7 @@ figcaption {
     width: 4%;
 }
 
-.video-duration{
+.video-duration {
     object-fit: contain;
     font-family: 'Lato', sans-serif;
     font-size: 11px;
@@ -100,29 +105,44 @@ figcaption {
     color: #ffffff;
 }
 
-.arrow-left{
+.arrow-left {
     position: absolute;
     top: 43%;
     left: -25%;
     z-index: 1;
 }
-.arrow-right{
+
+.arrow-right {
     position: absolute;
     right: 24%;
     top: 69%;
     width: 4%;
     z-index: 1;
 }
-.videos-container{
+
+.videos-container {
     padding-right: 0px;
     padding-left: 0px;
     width: 95%;
+    position: relative;
 }
 
-.videos-arrows{
+.videos-arrows {
     text-align: center;
-    letter-spacing: 38.29vw;
-    top: 58%;
-    left: 25%;
-    position: absolute;
+    /*letter-spacing: 38.29vw;*/
+    /*top: 58%;*/
+    /*left: 25%;*/
+    /*position: absolute;*/
+}
+
+.videos-first-child {
+    width: 100px;
+    height: 5px;
+}
+
+.videos-second-child {
+    margin-left: -4px;
+    width: 100px;
+    height: 1px;
+    margin-bottom: -3px;
 }

@@ -25,8 +25,8 @@ videos.slick({
     ],
     arrows:true,
     appendArrows:$('#videos_arrows'),
-    prevArrow:'<a href="javascript:;"><img src="../img/vector-smart-object-copy-3.png" style="width:8%;"></a>',
-    nextArrow:'<a href="javascript:;"><img src="../img/arrow-right.png" style="width:5%;"></a>',
+    prevArrow: '<a href="javascript:;"><img src="/src/static/img/vector-smart-object-copy-3.png" style="width:8%;margin-right: 8px;"></a>',
+    nextArrow: '<a href="javascript:;"><img src="/src/static/img/arrow-right.png" style="width:5.3%;"></a>',
     infinite:true
 });
 

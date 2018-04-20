@@ -55,5 +55,20 @@
     background-position:left;
     padding-bottom:100px;
     padding-top:100px;
+}
 
+.daily-tweets-first-child {
+    width: 100px;
+    height: 5px;
+}
+
+.daily-tweets-second-child {
+    margin-left: -4px;
+    width: 100px;
+    height: 1px;
+    margin-bottom: -3px;
+}
+
+.daily-tweets-container {
+    position: relative;
 }

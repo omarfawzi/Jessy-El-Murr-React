@@ -11,10 +11,12 @@ figure.snip1167 {
     text-align: left;
     box-shadow: none !important;
 }
+
 figure.snip1167 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 figure.snip1167 img {
     max-width: 100%;
     /*height: 100px;*/
@@ -25,6 +27,7 @@ figure.snip1167 img {
     z-index: 1;
     position: relative;
 }
+
 figure.snip1167 blockquote {
     margin: 0;
     display: block;
@@ -38,6 +41,7 @@ figure.snip1167 blockquote {
     line-height: 1.6em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
+
 figure.snip1167 blockquote:before,
 figure.snip1167 blockquote:after {
     font-family: 'Lato', sans-serif;
@@ -47,15 +51,18 @@ figure.snip1167 blockquote:after {
     opacity: 0.3;
     font-style: normal;
 }
+
 figure.snip1167 blockquote:before {
     top: 70px;
     left: 20px;
 }
+
 figure.snip1167 blockquote:after {
     /*content: "\201D";*/
     right: 20px;
     bottom: 0;
 }
+
 figure.snip1167 .author {
     padding: 15px;
     margin: 0;
@@ -63,33 +70,35 @@ figure.snip1167 .author {
     color: #ffffff;
     text-align: center;
 }
+
 figure.snip1167 .author h5 {
     opacity: 0.8;
     margin: 0;
     font-weight: 800;
 }
+
 figure.snip1167 .author h5 span {
     font-weight: 400;
     text-transform: none;
     display: block;
 }
+
 .testimonials-background {
     background-image: linear-gradient(318deg, #6c12d3, #4a62dc);
 }
 
-.balls-left{
+.balls-left {
     background-image: url("../img/vector-smart-object-copy-9.png");
     /*background-size: 949px 1520px;*/
     background-repeat: no-repeat;
-    background-position:left;
-    padding-bottom:100px;
-    padding-top:100px;
+    background-position: left;
+    padding-bottom: 100px;
+    padding-top: 100px;
     background-size: 39%;
-
 
 }
 
-.testimonials{
+.testimonials {
     font-family: 'Lato', sans-serif;
     font-size: 72px;
     font-weight: 900;
@@ -101,7 +110,7 @@ figure.snip1167 .author h5 span {
     color: #ffffff;
 }
 
-.quote-first-child{
+.quote-first-child {
     position: absolute !important;
     left: 45%;
     width: 47px !important;
@@ -109,7 +118,7 @@ figure.snip1167 .author h5 span {
     top: 26%;
 }
 
-.quote-second-child{
+.quote-second-child {
     position: absolute !important;
     left: 48%;
     width: 19px !important;
@@ -135,12 +144,12 @@ figure.snip1167 .author h5 span {
 
 }
 
-.padding-0{
-    padding-right:0;
-    padding-left:0;
+.padding-0 {
+    padding-right: 0;
+    padding-left: 0;
 }
 
-.quotes-paragraph{
+.quotes-paragraph {
     font-family: 'Lato', sans-serif;
     font-size: 12px;
     font-weight: bold;
@@ -152,19 +161,31 @@ figure.snip1167 .author h5 span {
     color: #000000;
 }
 
-.testimonials-opacity > .slick-list >.slick-track > .slick-slide:nth-child(even) {
+.testimonials-opacity > .slick-list > .slick-track > .slick-slide:nth-child(even) {
     opacity: 0.2;
 }
 
-.arrow-size{
+.arrow-size {
     width: 89px;
 }
 
-.testimonials-container{
+.testimonials-container {
     width: 95%;
+    position: relative;
 }
 
-.testimonials-arrows{
+.testimonials-arrows {
     text-align: center;
-    letter-spacing: 3vw;
+}
+
+.testimonials-first-child {
+    width: 100px;
+    height: 5px;
+}
+
+.testimonials-second-child {
+    margin-left: -4px;
+    width: 100px;
+    height: 1px;
+    margin-bottom: -3px;
 }
