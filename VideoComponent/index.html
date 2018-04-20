@@ -1,0 +1,57 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>React</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sheet.css">
+  </head>
+  <body>
+    <div id="Data"></div>
+
+ <script type="text/babel">
+ 
+  var Name= React.createClass({
+   render:function() {
+     return(
+             <div >
+             	<h1 className="Daily-Tweets-Episodes-video-title"> {this.props.VideoName} </h1>
+             </div>
+           );
+                    }
+                  });
+
+  var SectionVideo= React.createClass({
+   render:function() {
+     return(
+     <div className="row">
+       <div className="col-lg-4 col-md-4 ">
+       	 <a href="#" className="d-block mb-4 h-100">    
+     		<div className="row">
+             <div  className="col-centered" >
+                    <img src="img/layer-5.png" className="img-fluid Daily-Tweets-Episodes-video-img"  alt="" />
+                    <img src="img/ellipse-2-copy.png" className="Daily-Tweets-Episodes-video-img-first-child" />
+                    <img src="img/vector-smart-object-copy-10.png" className="Daily-Tweets-Episodes-video-img-second-child" />
+             </div>
+                   <Name VideoName ="Episodes one"/>
+                   <Name> </Name> 
+         </div>
+            </a>
+ </div>
+</div>
+           );
+                    }
+                  });
+  
+ReactDOM.render(<div> 
+			<SectionVideo/>
+			<SectionVideo/>
+		</div>, document.getElementById('Data'));
+ </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+
+.biography{
+	font-family: 'Lato', sans-serif;
+	font-size: 72px;
+	font-weight: 900;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: black;
+}
+
+.biography-btn{
+	position: absolute;
+	bottom: -4.1%;
+}
+.balls-center{
+	background-image: url("../img/balls-center.jpg");
+	/*background-size: 949px 1520px;*/
+	background-repeat: no-repeat;
+	background-position:center;
+	padding-bottom:100px;
+	padding-top:100px;
+	background-size: 74%;
+}
+.biography_div1{
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(#FFFFFF,#FFFFFF);
+	box-shadow: 0px 0px 50px #CDCDCD;
+	background-repeat: no-repeat;
+}
+
+.biography_h1{
+	position: absolute;
+	font-family: 'Lato', sans-serif;
+	font-size: 155%;
+	color: #4a62dc;
+	top: 5%;
+	left: 15%;
+}
+
+.biography_pre{
+	/*height:298;*/
+	tab-size: 0;
+	position: absolute;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #000000;
+	top: 15%;
+	left: 15%;
+	font-weight: bold;
+}
+
+.biography_underline{
+	/*position:absolute;*/
+	width:200px;
+	top:19%;
+	left:-20%;
+}
+
+.biography_avatar {
+	box-shadow: 0px 0px 50px #CDCDCD;
+	border-radius: 50%;
+	position: absolute;
+	width: auto;
+	height: 38%;
+	top: -23%;
+	left: -14%;
+}
+
+.bio-text{
+	position: relative;
+	top: 13%;
+	height: 390px;
+	overflow: hidden;
+}
