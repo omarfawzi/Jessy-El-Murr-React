@@ -1,23 +1,56 @@
 import React from 'react';
 import GuestsCard from './guestsCard';
 import instance from '../services/config';
+import ViewMoreButton from './viewMoreButton';
 
 export default class GuestsComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {guests: []};
+        this.state = {initialData:[],backUpData:[],flag:false};
+    }
+
+    setContents(guests)
+    {
+      var inData = this.state.initialData;
+      var backData = this.state.backUpData;
+      for(var i = 0 ; i < guests.length ; i ++)
+      {
+        if(i<3)
+        {
+          inData.push(guests[i]);
+        }
+        else
+        {
+          backData.push(guests[i]);
+        }
+      }
+      this.setState({initialData:inData,backUpData:backData});
     }
 
     componentDidMount() {
-        /*instance.get('/guests/get')
-        .then((response) => this.setState({guests:response.data}))
-        .catch((error)=> {this.renderError()});
-        */
         instance.get('/guests/get')
-            .then(function (response) {
-                console.log(response.data);
+            .then(response=>{
+                this.setContents(response.data);
             });
+    }
+
+    renderGuests()
+    {
+      return(
+        this.state.initialData.map(guest =><GuestsCard key={guest.guest_id} guest={guest}/>)
+      );
+    }
+
+    updateGuests()
+    {
+      if(this.state.flag==false)
+      {
+        var backData = this.state.backUpData;
+        var inData = this.state.initialData;
+        var total = inData.concat(backData);
+        this.setState({initialData:total,flag:true});
+      }
     }
 
     render() {
@@ -31,11 +64,13 @@ export default class GuestsComponent extends React.Component {
                                 <hr align="left" className="guests_firstLine"/>
                                 <hr align="left" className="guests_secondLine"/>
                             </div>
-                            <GuestsCard/>
+                            <div className="row">
+                              {this.renderGuests()}
+                            </div>
                             <br/>
                             <br/>
                             <br/>
-                            <button type="button" className="btn-lg guests_viewMoreButton border-0">View More</button>
+                            <ViewMoreButton onClick={this.updateGuests.bind(this)} />
                         </div>
                     </div>
                 </div>
