@@ -32,7 +32,7 @@ export default class GuestsComponent extends React.Component {
 
     renderGuests() {
         return (
-            this.state.guests.map(guest => <GuestsCard key={guest.guest_id} guest={guest}/>)
+            this.state.guests.map(guest => <GuestsCard key={guest.id} guest={guest}/>)
         );
     }
 

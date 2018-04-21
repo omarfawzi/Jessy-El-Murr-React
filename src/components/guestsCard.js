@@ -9,14 +9,14 @@ export default class GuestsCard extends React.Component {
                 <div className="card guests_card_shadow border-0 card h-100">
                         <div className="card-body text-center">
                             <p>
-                                <ProgressiveImage src={this.props.guest.guest_photo}
+                                <ProgressiveImage src={this.props.guest.photo}
                                                   placeholder='/src/static/img/loader.gif'>
                                     {(src) => <img src={src} className="rounded img-fluid guests_card_image"
                                                    alt='an image'/>}
                                 </ProgressiveImage>
                             </p>
-                            <h3 className="guests_roseLeslie">{this.props.guest.guest_name}</h3>
-                            <h4 className="guests_movieActor">{this.props.guest.guest_job}</h4>
+                            <h3 className="guests_roseLeslie">{this.props.guest.name}</h3>
+                            <h4 className="guests_movieActor">{this.props.guest.job}</h4>
                             <hr className="guests_firstLine"/>
                             <div className="text-center">
                                 <a href="#" className="btn-floating btn-sm btn-fb mx-1">

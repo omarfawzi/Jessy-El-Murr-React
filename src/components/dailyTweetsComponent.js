@@ -1,20 +1,28 @@
 import React from 'react';
 import DailyTweets from './dailyTweets';
 import StickViewMoreButton from "./stickViewMoreButton";
+import dailyTweetsService from "../services/dailyTweetsService";
+import Loader from "./loader";
 
 export default class DailyTweetsComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {tweets: [], isClicked: false};
+        this.state = {tweets: [], isClicked: false, loading: false};
+        dailyTweetsService.prototype.init();
     }
 
     componentDidMount() {
-
+        dailyTweetsService.prototype.initTweets().then(result => {
+            this.setState({tweets: result, loading: true});
+        });
     }
 
     updateDailyTweets() {
-
+        this.setState({loading: false});
+        dailyTweetsService.prototype.updateTweets().then(result => {
+            this.setState({tweets: this.state.tweets.concat(result), isClicked: true, loading: true});
+        });
     }
 
     renderButton() {
@@ -30,8 +38,19 @@ export default class DailyTweetsComponent extends React.Component {
 
     renderTweets() {
         return (
-            this.state.tweets.map(tweet => <DailyTweets key={tweet.id} guest={tweet}/>)
+            this.state.tweets.map(tweet => <DailyTweets key={tweet.id} tweet={tweet}/>)
         );
+    }
+
+    renderLoader() {
+        if (this.state.loading === false) {
+            return (
+                <Loader/>
+            );
+        }
+        else {
+            return null;
+        }
     }
 
     render() {
@@ -48,7 +67,10 @@ export default class DailyTweetsComponent extends React.Component {
                                      className="daily-tweets-second-child"/>
                             </div>
                         </div>
-                        <DailyTweets/>
+                        {this.renderLoader()}
+                        <div className="row">
+                            {this.renderTweets()}
+                        </div>
                     </div>
                 </div>
 
