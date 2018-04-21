@@ -1,19 +1,37 @@
 import React from 'react';
 import Videos from './videos';
-import instance from '../services/config';
+import StickViewMoreButton from "./stickViewMoreButton";
 
 export default class VideosComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {videos: []};
+        this.state = {videos: [], isClicked: false};
     }
 
     componentDidMount() {
-        instance.get('/guests/get')
-            .then(function (response) {
-                console.log(response.data);
-            });
+
+    }
+
+    updateVideos() {
+
+    }
+
+    renderButton() {
+        if (this.state.isClicked === false) {
+            return (
+                <StickViewMoreButton onClick={this.updateVideos.bind(this)}/>
+            );
+        }
+        else {
+            return null;
+        }
+    }
+
+    renderVideos() {
+        return (
+            this.state.videos.map(video => <Videos key={video.id} guest={video}/>)
+        );
     }
 
     render() {
@@ -34,11 +52,9 @@ export default class VideosComponent extends React.Component {
 
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-12 text-center">
-                        <button type="button" className="btn-lg videos_viewMoreButton border-0">View More</button>
-                    </div>
-                </div>
+
+                {this.renderButton()}
+
             </section>
         );
     }

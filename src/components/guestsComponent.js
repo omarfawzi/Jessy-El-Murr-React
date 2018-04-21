@@ -7,7 +7,7 @@ export default class GuestsComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {guests: [], isClicked:false};
+        this.state = {guests: [], isClicked: false};
         guestsService.prototype.init();
     }
 
@@ -17,30 +17,26 @@ export default class GuestsComponent extends React.Component {
         });
     }
 
-    renderButton()
-    {
-      if(this.state.isClicked==false)
-      {
-        return(
-          <ViewMoreButton onClick={this.updateGuests.bind(this)} />
+    renderButton() {
+        if (this.state.isClicked === false) {
+            return (
+                <ViewMoreButton onClick={this.updateGuests.bind(this)}/>
+            );
+        }
+        else {
+            return null;
+        }
+    }
+
+    renderGuests() {
+        return (
+            this.state.guests.map(guest => <GuestsCard key={guest.guest_id} guest={guest}/>)
         );
-      }
-      else{
-        return null;
-      }
     }
 
-    renderGuests()
-    {
-      return(
-          this.state.guests.map(guest => <GuestsCard key={guest.guest_id} guest={guest}/>)
-      );
-    }
-
-    updateGuests()
-    {
+    updateGuests() {
         guestsService.prototype.updateGuests().then(result => {
-            this.setState({guests: this.state.guests.concat(result),isClicked:true});
+            this.setState({guests: this.state.guests.concat(result), isClicked: true});
         });
     }
 
@@ -56,7 +52,7 @@ export default class GuestsComponent extends React.Component {
                                 <hr align="left" className="guests_secondLine"/>
                             </div>
                             <div className="row">
-                              {this.renderGuests()}
+                                {this.renderGuests()}
                             </div>
                             <br/>
                             <br/>

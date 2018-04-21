@@ -1,19 +1,37 @@
 import React from 'react';
 import DailyTweets from './dailyTweets';
-import instance from '../services/config';
+import StickViewMoreButton from "./stickViewMoreButton";
 
 export default class DailyTweetsComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {tweets: []};
+        this.state = {tweets: [], isClicked: false};
     }
 
     componentDidMount() {
-        instance.get('/guests/get')
-            .then(function (response) {
-                console.log(response.data);
-            });
+
+    }
+
+    updateDailyTweets() {
+
+    }
+
+    renderButton() {
+        if (this.state.isClicked === false) {
+            return (
+                <StickViewMoreButton onClick={this.updateDailyTweets.bind(this)}/>
+            );
+        }
+        else {
+            return null;
+        }
+    }
+
+    renderTweets() {
+        return (
+            this.state.tweets.map(tweet => <DailyTweets key={tweet.id} guest={tweet}/>)
+        );
     }
 
     render() {
@@ -33,11 +51,8 @@ export default class DailyTweetsComponent extends React.Component {
                         <DailyTweets/>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-12 text-center">
-                        <button type="button" className="btn-lg videos_viewMoreButton border-0">View More</button>
-                    </div>
-                </div>
+
+                {this.renderButton()}
 
             </section>
         );

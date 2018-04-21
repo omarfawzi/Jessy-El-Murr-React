@@ -149,7 +149,7 @@ figcaption {
 
 .videos_viewMoreButton {
     background-color: #FFFFFF;
-    margin-top: 2%;
+    margin-top: 3.5%;
     margin-left: -4%;
     font-family: 'Lato', sans-serif;
     color: #FFFFFF;
@@ -158,4 +158,5 @@ figcaption {
     padding: 0.8rem 2rem !important;
     box-shadow: 0 0 43px 0 rgba(0, 0, 0, 0.5);
     position: absolute;
+    cursor: pointer;
 }
