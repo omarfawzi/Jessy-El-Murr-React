@@ -18,6 +18,8 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+    word-wrap: break-word;
+
 }
 
 .videos-background {

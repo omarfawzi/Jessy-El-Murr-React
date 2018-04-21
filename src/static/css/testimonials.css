@@ -108,6 +108,8 @@ figure.snip1167 .author h5 span {
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+    word-wrap: break-word;
+
 }
 
 .quote-first-child {

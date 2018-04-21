@@ -8,6 +8,8 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+    word-wrap: break-word;
+
 }
 
 .Daily-Tweets-Episodes-video-title {
@@ -20,6 +22,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+
 }
 
 .Daily-Tweets-Episodes-background {

@@ -27,7 +27,7 @@ testimonials.slick({
     appendArrows:$('#testimonials_arrows'),
     prevArrow: '<a href="javascript:;"><img src="/src/static/img/arrow-left.png" style="margin-right: 5px;width: 30%;"></a>',
     nextArrow: '<a href="javascript:;"><img src="/src/static/img/arrow-right.png" style="margin-left: 11px;width: 28%"></a>',
-    infinite:true
+    infinite: false
 });
 
 testimonials.on('afterChange', function(event, slick, currentSlide){
