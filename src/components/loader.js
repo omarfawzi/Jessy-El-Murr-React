@@ -7,7 +7,7 @@ export default class Loader extends React.Component {
         return (
             <div className="row">
                 <div className="col-centered">
-                    <Loading type='bars' width={100} height={100} fill='#f44242'/>
+                    <Loading type='bars' width={100} height={100} fill='#6b15d3'/>
                 </div>
             </div>
         );

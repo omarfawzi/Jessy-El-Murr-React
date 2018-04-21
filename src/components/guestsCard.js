@@ -1,5 +1,6 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import ProgressiveImage from "react-progressive-image";
 
 export default class GuestsCard extends React.Component {
     render() {
@@ -7,8 +8,13 @@ export default class GuestsCard extends React.Component {
             <div className="col-xs-12 col-sm-6 col-md-4 pb-2 pr-2 pl-2 pt-2">
                 <div className="card guests_card_shadow border-0 card h-100">
                         <div className="card-body text-center">
-                            <p><img className="rounded img-fluid guests_card_image"
-                                    src={this.props.guest.guest_photo} alt="card image"/></p>
+                            <p>
+                                <ProgressiveImage src={this.props.guest.guest_photo}
+                                                  placeholder='/src/static/img/loader.gif'>
+                                    {(src) => <img src={src} className="rounded img-fluid guests_card_image"
+                                                   alt='an image'/>}
+                                </ProgressiveImage>
+                            </p>
                             <h3 className="guests_roseLeslie">{this.props.guest.guest_name}</h3>
                             <h4 className="guests_movieActor">{this.props.guest.guest_job}</h4>
                             <hr className="guests_firstLine"/>
