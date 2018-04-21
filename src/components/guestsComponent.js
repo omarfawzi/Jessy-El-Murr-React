@@ -7,36 +7,27 @@ export default class GuestsComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {guests: []};
+        this.state = {guests: [], isClicked:false};
         guestsService.prototype.init();
     }
-
-    // setContents(guests)
-    // {
-    //   // var inData = this.state.initialData;
-    //   // var backData = this.state.backUpData;
-    //   // for(var i = 0 ; i < guests.length ; i ++)
-    //   // {
-    //   //   if(i<3)
-    //   //   {
-    //   //     inData.push(guests[i]);
-    //   //   }
-    //   //   else
-    //   //   {
-    //   //     backData.push(guests[i]);
-    //   //   }
-    //   // }
-    //   // this.setState({initialData:inData,backUpData:backData});
-    // }
 
     componentDidMount() {
         guestsService.prototype.initGuests().then(result => {
             this.setState({guests: result});
         });
-        // instance.get('/guests/get')
-        //     .then(response=>{
-        //         this.setContents(response.data);
-        //     });
+    }
+
+    renderButton()
+    {
+      if(this.state.isClicked==false)
+      {
+        return(
+          <ViewMoreButton onClick={this.updateGuests.bind(this)} />
+        );
+      }
+      else{
+        return null;
+      }
     }
 
     renderGuests()
@@ -48,15 +39,8 @@ export default class GuestsComponent extends React.Component {
 
     updateGuests()
     {
-        // if(this.state.flag==false)
-        // {
-        //   var backData = this.state.backUpData;
-        //   var inData = this.state.initialData;
-        //   var total = inData.concat(backData);
-        //   this.setState({initialData:total,flag:true});
-        // }
         guestsService.prototype.updateGuests().then(result => {
-            this.setState({guests: this.state.guests.concat(result)});
+            this.setState({guests: this.state.guests.concat(result),isClicked:true});
         });
     }
 
@@ -77,7 +61,7 @@ export default class GuestsComponent extends React.Component {
                             <br/>
                             <br/>
                             <br/>
-                            <ViewMoreButton onClick={this.updateGuests.bind(this)} />
+                            {this.renderButton()}
                         </div>
                     </div>
                 </div>
