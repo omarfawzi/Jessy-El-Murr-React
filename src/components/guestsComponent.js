@@ -1,56 +1,63 @@
 import React from 'react';
 import GuestsCard from './guestsCard';
-import instance from '../services/config';
 import ViewMoreButton from './viewMoreButton';
+import guestsService from '../services/guestsService';
 
 export default class GuestsComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {initialData:[],backUpData:[],flag:false};
+        this.state = {guests: []};
+        guestsService.prototype.init();
     }
 
-    setContents(guests)
-    {
-      var inData = this.state.initialData;
-      var backData = this.state.backUpData;
-      for(var i = 0 ; i < guests.length ; i ++)
-      {
-        if(i<3)
-        {
-          inData.push(guests[i]);
-        }
-        else
-        {
-          backData.push(guests[i]);
-        }
-      }
-      this.setState({initialData:inData,backUpData:backData});
-    }
+    // setContents(guests)
+    // {
+    //   // var inData = this.state.initialData;
+    //   // var backData = this.state.backUpData;
+    //   // for(var i = 0 ; i < guests.length ; i ++)
+    //   // {
+    //   //   if(i<3)
+    //   //   {
+    //   //     inData.push(guests[i]);
+    //   //   }
+    //   //   else
+    //   //   {
+    //   //     backData.push(guests[i]);
+    //   //   }
+    //   // }
+    //   // this.setState({initialData:inData,backUpData:backData});
+    // }
 
     componentDidMount() {
-        instance.get('/guests/get')
-            .then(response=>{
-                this.setContents(response.data);
-            });
+        guestsService.prototype.initGuests().then(result => {
+            this.setState({guests: result});
+        });
+        // instance.get('/guests/get')
+        //     .then(response=>{
+        //         this.setContents(response.data);
+        //     });
     }
 
     renderGuests()
     {
       return(
-        this.state.initialData.map(guest =><GuestsCard key={guest.guest_id} guest={guest}/>)
+          this.state.guests.map(guest => <GuestsCard key={guest.guest_id} guest={guest}/>)
       );
     }
 
     updateGuests()
     {
-      if(this.state.flag==false)
-      {
-        var backData = this.state.backUpData;
-        var inData = this.state.initialData;
-        var total = inData.concat(backData);
-        this.setState({initialData:total,flag:true});
-      }
+        // if(this.state.flag==false)
+        // {
+        //   var backData = this.state.backUpData;
+        //   var inData = this.state.initialData;
+        //   var total = inData.concat(backData);
+        //   this.setState({initialData:total,flag:true});
+        // }
+        guestsService.prototype.updateGuests().then(result => {
+            this.setState({guests: this.state.guests.concat(result)});
+        });
     }
 
     render() {

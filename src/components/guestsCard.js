@@ -4,8 +4,8 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 export default class GuestsCard extends React.Component {
     render() {
         return (
-                  <div className="col-xs-12 col-sm-6 col-md-4">
-                    <div className="card guests_card_shadow border-0">
+            <div className="col-xs-12 col-sm-6 col-md-4 pb-2 pr-2 pl-2 pt-2">
+                <div className="card guests_card_shadow border-0 card h-100">
                         <div className="card-body text-center">
                             <p><img className="rounded img-fluid guests_card_image"
                                     src={this.props.guest.guest_photo} alt="card image"/></p>
