@@ -14,7 +14,7 @@ export default class GuestsComponent extends React.Component {
     }
 
     componentDidMount() {
-        guestsService.prototype.initGuests().then(result => {
+        guestsService.prototype.initComponent().then(result => {
             this.setState({guests: result, loading: true});
         });
     }
@@ -49,7 +49,7 @@ export default class GuestsComponent extends React.Component {
 
     updateGuests() {
         this.setState({loading: false});
-        guestsService.prototype.updateGuests().then(result => {
+        guestsService.prototype.updateComponent().then(result => {
             this.setState({guests: this.state.guests.concat(result), isClicked: true, loading: true});
         });
     }

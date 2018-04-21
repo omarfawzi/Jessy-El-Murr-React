@@ -2,7 +2,7 @@ import React from 'react';
 import DailyTweets from './dailyTweets';
 import StickViewMoreButton from "./stickViewMoreButton";
 import dailyTweetsService from "../services/dailyTweetsService";
-import Loader from "./loader";
+import WhiteLoader from "./whiteLoader";
 
 export default class DailyTweetsComponent extends React.Component {
 
@@ -13,14 +13,14 @@ export default class DailyTweetsComponent extends React.Component {
     }
 
     componentDidMount() {
-        dailyTweetsService.prototype.initTweets().then(result => {
+        dailyTweetsService.prototype.initComponent().then(result => {
             this.setState({tweets: result, loading: true});
         });
     }
 
     updateDailyTweets() {
         this.setState({loading: false});
-        dailyTweetsService.prototype.updateTweets().then(result => {
+        dailyTweetsService.prototype.updateComponent().then(result => {
             this.setState({tweets: this.state.tweets.concat(result), isClicked: true, loading: true});
         });
     }
@@ -45,7 +45,7 @@ export default class DailyTweetsComponent extends React.Component {
     renderLoader() {
         if (this.state.loading === false) {
             return (
-                <Loader/>
+                <WhiteLoader/>
             );
         }
         else {

@@ -1,33 +1,15 @@
-import instance from './config';
+import Service from "./Service";
 
-export default class guestsService {
+export default class guestsService extends Service {
 
     constructor() {
-
+        super();
     }
 
     init() {
         this.limit = 3;
         this.offset = 0;
-    }
-
-    initGuests() {
-        return new Promise((resolve) => {
-            instance.get('/guests/get', {params: {limit: this.limit, offset: this.offset}})
-                .then(response => {
-                    resolve(response.data);
-                });
-        });
-
-    }
-
-    updateGuests() {
-        return new Promise((resolve) => {
-            instance.get('/guests/get', {params: {offset: this.limit}})
-                .then(response => {
-                    resolve(response.data);
-                });
-        });
+        this.endpoint = '/guests/get';
     }
 
 }

@@ -1,33 +1,15 @@
-import instance from './config';
+import Service from "./Service";
 
-export default class dailyTweetsService {
+export default class dailyTweetsService extends Service {
 
     constructor() {
-
+        super();
     }
 
     init() {
         this.limit = 3;
         this.offset = 0;
-    }
-
-    initTweets() {
-        return new Promise((resolve) => {
-            instance.get('/dailyTweets/get', {params: {limit: this.limit, offset: this.offset}})
-                .then(response => {
-                    resolve(response.data);
-                });
-        });
-
-    }
-
-    updateTweets() {
-        return new Promise((resolve) => {
-            instance.get('/dailyTweets/get', {params: {offset: this.limit}})
-                .then(response => {
-                    resolve(response.data);
-                });
-        });
+        this.endpoint = '/dailyTweets/get';
     }
 
 }
