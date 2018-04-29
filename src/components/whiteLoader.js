@@ -1,5 +1,5 @@
 import React from 'react';
-import Loading from 'react-loading-components';
+import ReactLoading from 'react-loading';
 
 export default class WhiteLoader extends React.Component {
 
@@ -7,7 +7,7 @@ export default class WhiteLoader extends React.Component {
         return (
             <div className="row">
                 <div className="col-centered">
-                    <Loading type='bars' width={100} height={100} fill='white'/>
+                    <ReactLoading type={'bars'} color={'#FFFFFF'} height={100} width={100} />
                 </div>
             </div>
         );

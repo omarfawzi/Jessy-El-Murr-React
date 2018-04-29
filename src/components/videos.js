@@ -9,7 +9,7 @@ export default class Videos extends React.Component {
     render() {
         return (
             <div>
-                <Slider className="row videos-opacity videos-slider" {...sliderSettings}>
+                <Slider onEdge={()=>this.log()} className="row videos-opacity videos-slider" {...sliderSettings}>
                     <div className="  ">
                         <figure>
                             <img className="img-fluid videos-img" src="/src/static/img/layer-3.png" alt=""/>
