@@ -1,11 +1,16 @@
 import React from 'react';
+import Slider from 'react-slick';
+import sliderSettings from './sliderSettings';
 
 export default class Videos extends React.Component {
+    log() {
+        console.log('hello');
+    }
     render() {
         return (
             <div>
-                <div className="row videos-opacity videos-slider">
-                    <div className="col-lg-4 col-md-4 padding-0">
+                <Slider className="row videos-opacity videos-slider" {...sliderSettings}>
+                    <div className="  ">
                         <figure>
                             <img className="img-fluid videos-img" src="/src/static/img/layer-3.png" alt=""/>
                             <figcaption>
@@ -19,7 +24,7 @@ export default class Videos extends React.Component {
                             </figcaption>
                         </figure>
                     </div>
-                    <div className="col-lg-4 col-md-4 padding-0">
+                    <div className="  ">
                         <figure>
                             <img className="img-fluid videos-img" src="/src/static/img/layer-3.png" alt=""/>
                             <figcaption>
@@ -33,7 +38,7 @@ export default class Videos extends React.Component {
                             </figcaption>
                         </figure>
                     </div>
-                    <div className="col-lg-4 col-md-4 padding-0">
+                    <div className="  ">
                         <figure>
                             <img className="img-fluid videos-img" src="/src/static/img/layer-3.png" alt=""/>
                             <figcaption>
@@ -47,7 +52,7 @@ export default class Videos extends React.Component {
                             </figcaption>
                         </figure>
                     </div>
-                    <div className="col-lg-4 col-md-4 padding-0">
+                    <div className="  ">
                         <figure>
                             <img className="img-fluid videos-img" src="/src/static/img/layer-3.png" alt=""/>
                             <figcaption>
@@ -61,7 +66,7 @@ export default class Videos extends React.Component {
                             </figcaption>
                         </figure>
                     </div>
-                    <div className="col-lg-4 col-md-4 padding-0">
+                    <div className="  ">
                         <figure>
                             <img className="img-fluid videos-img" src="/src/static/img/layer-3.png" alt=""/>
                             <figcaption>
@@ -76,14 +81,14 @@ export default class Videos extends React.Component {
                         </figure>
                     </div>
 
-                </div>
-                <br/>
-                <br/>
-                <div className="row">
-                    <div id="videos_arrows" className="videos-arrows col-md-12">
+                </Slider>
+                {/*<br/>*/}
+                {/*<br/>*/}
+                {/*<div className="row">*/}
+                {/*<div id="videos_arrows" className="videos-arrows col-md-12">*/}
 
-                    </div>
-                </div>
+                {/*</div>*/}
+                {/*</div>*/}
             </div>
         );
     }

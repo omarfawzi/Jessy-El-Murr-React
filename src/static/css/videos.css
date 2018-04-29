@@ -49,7 +49,29 @@
 
 }
 
-.videos-opacity > .slick-list > .slick-track > .slick-slide:nth-child(even) {
+.nextArrow {
+    position: absolute;
+    left: 71%;
+    top: 28%;
+    z-index: 1;
+}
+
+.nextArrow > img {
+    width: 32px;
+}
+
+.prevArrow {
+    position: absolute;
+    left: 23%;
+    top: 26%;
+    z-index: 1;
+}
+
+.prevArrow > img {
+    width: 52px;
+}
+
+.videos-opacity > .slick-list > .slick-track > .slick-slide:nth-child(odd) {
     opacity: 0.5;
 }
 
@@ -65,18 +87,18 @@
 }
 
 figcaption {
-    position: absolute;
+    position: relative;
     z-index: 1;
-    left: 0;
-    bottom: 0;
-    /*width    : 200px;*/
-    /*height   : 240px;*/
-    /*background : #000;*/
+    /* left: 0; */
+    top: -90px;
+    /* width: 200px; */
+    /* height: 240px; */
+    /* background: #000; */
     background-color: rgb(91, 62, 216, 0.5);
-    /*background-color: #5b3ed8;*/
+    /* background-color: #5b3ed8; */
     width: 69%;
-    height: 38%;
-    /*opacity: 0.5;*/
+    height: 93px;
+    /* opacity: 0.5; */
 
 }
 
