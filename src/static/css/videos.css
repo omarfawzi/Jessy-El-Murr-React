@@ -71,7 +71,7 @@
     width: 52px;
 }
 
-.videos-opacity > .slick-list > .slick-track > .slick-slide:nth-child(odd) {
+.swiper-slide:nth-child(even) {
     opacity: 0.5;
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import Testimonials from './testimonials';
-import instance from '../services/config';
 
 export default class TestimonialsComponent extends React.Component {
 
@@ -14,10 +13,9 @@ export default class TestimonialsComponent extends React.Component {
         .then((response) => this.setState({guests:response.data}))
         .catch((error)=> {this.renderError()});
         */
-        instance.get('/guests/get')
-            .then(function (response) {
-                console.log(response.data);
-            });
+        // instance.get('/guests/get')
+        //     .then(function (response) {
+        //     });
     }
 
     render() {
