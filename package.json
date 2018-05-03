@@ -28,10 +28,12 @@
     "babel-preset-es2018": "^1.0.0",
     "babel-preset-react": "^6.24.1",
     "font-awesome": "^4.7.0",
+    "npm": "^6.0.0",
     "promise": "^8.0.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-fontawesome": "^1.6.1",
+    "react-loading": "^2.0.2",
     "react-loading-components": "^1.1.12",
     "react-progress": "0.0.12",
     "react-progressive-image": "^0.3.0",
@@ -40,7 +42,7 @@
     "webpack-cli": "^2.0.14"
   },
   "devDependencies": {
-    "webpack": "^4.5.0",
+    "webpack": "^4.6.0",
     "webpack-dev-server": "^3.1.3"
   }
 }

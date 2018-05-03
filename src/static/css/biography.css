@@ -1,4 +1,3 @@
-
 .biography{
 	font-family: 'Lato', sans-serif;
 	font-size: 72px;
@@ -10,11 +9,6 @@
 	text-align: left;
 	color: black;
 }
-
-.biography-btn{
-	position: absolute;
-	bottom: -4.1%;
-}
 .balls-center{
 	background-image: url("../img/balls-center.jpg");
 	/*background-size: 949px 1520px;*/
@@ -24,16 +18,23 @@
 	padding-top:100px;
 	background-size: 74%;
 }
-.biography_div1{
+#Biography_div1{
 	position: relative;
-	width: 100%;
+	width: 50%;
 	height: 500px;
 	background: linear-gradient(#FFFFFF,#FFFFFF);
 	box-shadow: 0px 0px 50px #CDCDCD;
 	background-repeat: no-repeat;
+	margin-top: 11%;
+	left: 20%;
+}
+#Biography_white_rectangle{
+	position:absolute;
+	width: 750px;
+	height: 900px;
 }
 
-.biography_h1{
+#Biography_h1{
 	position: absolute;
 	font-family: 'Lato', sans-serif;
 	font-size: 155%;
@@ -41,8 +42,7 @@
 	top: 5%;
 	left: 15%;
 }
-
-.biography_pre{
+#Biography_pre{
 	/*height:298;*/
 	tab-size: 0;
 	position: absolute;
@@ -53,27 +53,53 @@
 	left: 15%;
 	font-weight: bold;
 }
-
-.biography_underline{
+#Biography{
+	position:absolute;
+	font-family: 'Lato', sans-serif;
+	font-size: 72px;
+	color: #000000;
+	top:10%;
+	left:-20%;
+}
+.Biography_underline{
 	/*position:absolute;*/
 	width:200px;
 	top:19%;
 	left:-20%;
 }
-
-.biography_avatar {
+#Biography_button{
+	position: absolute;
+	padding: 0px;
+	border-radius: 32px;
+	border: none;
+	background-image: linear-gradient(318deg, #6c12d3, #4a62dc);
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 12%;
+	width: 29%;
+	font-family: 'Lato', sans-serif;
+	font-size: 69%;
+	top: 94%;
+	left: 36%;
+	box-shadow: 0px 0px 50px #CDCDCD;
+	/* text-align: center; */
+}
+#Biography_avatar {
 	box-shadow: 0px 0px 50px #CDCDCD;
 	border-radius: 50%;
 	position: absolute;
-	width: auto;
-	height: 38%;
-	top: -23%;
-	left: -14%;
+	width: 38%;
+	height: 32%;
+	top: -24%;
+	left: -15%;
 }
-
-.bio-text{
+.my-text{
 	position: relative;
+	/* left: 350px; */
 	top: 13%;
 	height: 390px;
-	overflow: hidden;
+	/* font: 16px/26px Georgia, Garamond, Serif; */
+	/* background-color: white; */
+	/* border: 1px solid #ccc; */
+	overflow: auto;
 }
