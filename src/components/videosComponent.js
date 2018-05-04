@@ -3,7 +3,7 @@ import Videos from './videos';
 import StickViewMoreButton from "./stickViewMoreButton";
 import videosService from '../services/videosService';
 import Swiper from 'react-id-swiper';
-import params from '../config/videosSliderSettings';
+import {getSettings} from '../config/videosSliderSettings';
 import WhiteLoader from "./whiteLoader";
 
 
@@ -65,7 +65,7 @@ export default class VideosComponent extends React.Component {
                             </div>
                         </div>
                         {this.renderLoader()}
-                          <Swiper className="row videos-opacity" {...params}>
+                        <Swiper className="row videos-opacity" {...getSettings(this.state)}>
                             {this.renderVideos()}
                           </Swiper>
                     </div>

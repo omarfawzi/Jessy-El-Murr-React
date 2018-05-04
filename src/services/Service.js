@@ -12,7 +12,6 @@ export default class Service {
     }
 
     initComponent() {
-        console.log(this.endpoint + ' ' + this.limit);
         return new Promise((resolve) => {
             instance.get(this.endpoint, {params: {limit: this.limit, offset: this.offset}})
                 .then(response => {
