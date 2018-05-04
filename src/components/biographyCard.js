@@ -11,9 +11,9 @@ export default class biographyCard extends React.Component {
         </ProgressiveImage>
         <div className="col-md-12 my-text">
           <h1 id="Biography_h1">{this.props.title}</h1>
-          <pre id="Biography_pre">
+            <p id="Biography_pre">
                 {this.props.bio}
-          </pre>
+            </p>
         </div>
       </div>
     );
