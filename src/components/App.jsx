@@ -11,8 +11,8 @@ class App extends React.Component {
             <div>
                 <VideosComponent/>
                 <BiographyComponent/>
-                <GuestsComponent/>
                 <DailyTweetsComponent/>
+                <GuestsComponent/>
                 <TestimonialsComponent/>
             </div>
         );
