@@ -19,6 +19,13 @@ export default class VideosComponent extends React.Component {
       });
     }
 
+    updateVideos() {
+        this.setState({loading: false});
+        videosService.prototype.updateComponent().then(result => {
+            this.setState({videos: this.state.videos.concat(result), isClicked: true, loading: true});
+        });
+    }
+
     renderButton() {
         if (this.state.isClicked === false) {
             return (
@@ -61,8 +68,8 @@ export default class VideosComponent extends React.Component {
             },
             on: {
                 reachEnd: () => {
-                    if (this.state.videos.length > 0) {
-                        console.log(this.state.videos)
+                    if (this.state.videos.length > 0 && this.state.isClicked === false) {
+                        this.updateVideos()
                     }
                 }
             },
