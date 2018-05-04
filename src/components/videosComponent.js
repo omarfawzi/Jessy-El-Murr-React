@@ -9,20 +9,20 @@ export default class VideosComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {videos: [], loadMore: false, isClicked: false, loading: false};
+        this.state = {videos: [], loadMore: false, isClicked: false};
         videosService.prototype.init();
     }
 
     componentDidMount() {
       videosService.prototype.initComponent().then(result => {
-          this.setState({videos: result, loading: true});
+          this.setState({videos: result, loadMore: true});
       });
     }
 
     updateVideos() {
-        this.setState({loading: false});
+        this.setState({loadMore: false});
         videosService.prototype.updateComponent().then(result => {
-            this.setState({videos: this.state.videos.concat(result), isClicked: true, loading: true});
+            this.setState({videos: this.state.videos.concat(result), isClicked: true, loadMore: true});
         });
     }
 
@@ -46,7 +46,7 @@ export default class VideosComponent extends React.Component {
     }
 
     renderLoader() {
-        if (this.state.loading === false) {
+        if (this.state.loadMore === false) {
             return (
                 <WhiteLoader/>
             );
@@ -62,6 +62,7 @@ export default class VideosComponent extends React.Component {
             slidesPerView: 'auto',
             centeredSlides: true,
             spaceBetween: 0,
+            shouldSwiperUpdate: true,
             navigation: {
                 nextEl: '.nextArrow',
                 prevEl: '.prevArrow'
@@ -76,7 +77,7 @@ export default class VideosComponent extends React.Component {
             renderPrevButton: () => <a className={'nextArrow'} href="javascript:"><img
                 src="/src/static/img/arrow-right.png"/></a>,
             renderNextButton: () => <a className={'prevArrow'} href="javascript:"><img
-                src="/src/static/img/vector-smart-object-copy-3.png"/></a>
+                src="/src/static/img/vector-smart-object-copy-3.png"/></a>,
         };
 
         return (
