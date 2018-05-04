@@ -52,6 +52,7 @@
 	top: 15%;
 	left: 15%;
 	font-weight: bold;
+    white-space: pre-line;
 }
 #Biography{
 	position:absolute;
