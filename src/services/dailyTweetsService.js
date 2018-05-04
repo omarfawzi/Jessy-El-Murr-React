@@ -7,7 +7,7 @@ export default class dailyTweetsService extends Service {
     }
 
     init() {
-        this.limit = 3;
+        this.limit = 6;
         this.offset = 0;
         this.endpoint = '/dailyTweets/get';
     }

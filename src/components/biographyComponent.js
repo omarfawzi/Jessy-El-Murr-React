@@ -19,14 +19,9 @@ export default class biographyComponent extends React.Component {
     }
 
     renderBiography() {
-        if (this.state.loading === true) {
-            return (
-                <BiographyCard photo={this.state.photo} title={this.state.title} bio={this.state.bio}/>
-            );
-        }
-        else {
-            return null;
-        }
+        return (
+            <BiographyCard photo={this.state.photo} title={this.state.title} bio={this.state.bio}/>
+        );
     }
 
     updateBiography() {

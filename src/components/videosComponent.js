@@ -4,19 +4,20 @@ import StickViewMoreButton from "./stickViewMoreButton";
 import videosService from '../services/videosService';
 import Swiper from 'react-id-swiper';
 import params from '../config/videosSliderSettings';
+import WhiteLoader from "./whiteLoader";
 
 
 export default class VideosComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {videos: [], loadMore: false, isClicked:false};
+        this.state = {videos: [], loadMore: false, isClicked: false, loading: false};
         videosService.prototype.init();
     }
 
     componentDidMount() {
       videosService.prototype.initComponent().then(result => {
-          this.setState({videos: result});
+          this.setState({videos: result, loading: true});
       });
     }
 
@@ -39,6 +40,17 @@ export default class VideosComponent extends React.Component {
         );
     }
 
+    renderLoader() {
+        if (this.state.loading === false) {
+            return (
+                <WhiteLoader/>
+            );
+        }
+        else {
+            return null;
+        }
+    }
+
     render() {
         return (
             <section className="videos-background section-gap" id="videos">
@@ -52,6 +64,7 @@ export default class VideosComponent extends React.Component {
                                      className="videos-second-child"/>
                             </div>
                         </div>
+                        {this.renderLoader()}
                           <Swiper className="row videos-opacity" {...params}>
                             {this.renderVideos()}
                           </Swiper>
