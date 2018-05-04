@@ -92,10 +92,11 @@ export default class VideosComponent extends React.Component {
                                      className="videos-second-child"/>
                             </div>
                         </div>
-                        {this.renderLoader()}
                         <Swiper className="row videos-opacity" {...params}>
                             {this.renderVideos()}
                           </Swiper>
+                        {this.renderLoader()}
+
                     </div>
                 </div>
                 {this.renderButton()}
