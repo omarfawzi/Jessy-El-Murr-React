@@ -1,26 +1,29 @@
 import React from 'react';
 import Videos from './videos';
 import StickViewMoreButton from "./stickViewMoreButton";
+import videosService from '../services/videosService';
+import Swiper from 'react-id-swiper';
+import params from '../config/sliderSettings';
+
 
 export default class VideosComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {videos: [], isClicked: false};
+        this.state = {videos: [], loadMore: false, isClicked:false};
+        videosService.prototype.init();
     }
 
     componentDidMount() {
-
-    }
-
-    updateVideos() {
-
+      videosService.prototype.initComponent().then(result => {
+          this.setState({videos: result});
+      });
     }
 
     renderButton() {
         if (this.state.isClicked === false) {
             return (
-                <StickViewMoreButton onClick={this.updateVideos.bind(this)}/>
+                <StickViewMoreButton/>
             );
         }
         else {
@@ -30,7 +33,9 @@ export default class VideosComponent extends React.Component {
 
     renderVideos() {
         return (
-            this.state.videos.map(video => <Videos key={video.id} guest={video}/>)
+            this.state.videos.map(video => <div className="col-lg-4 col-md-4 padding-0">
+            <Videos key={video.id} video={video}/>
+            </div>)
         );
     }
 
@@ -47,14 +52,12 @@ export default class VideosComponent extends React.Component {
                                      className="videos-second-child"/>
                             </div>
                         </div>
-
-                        <Videos/>
-
+                          <Swiper className="row videos-opacity" {...params}>
+                            {this.renderVideos()}
+                          </Swiper>
                     </div>
                 </div>
-
                 {this.renderButton()}
-
             </section>
         );
     }
