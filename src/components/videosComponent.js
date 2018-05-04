@@ -60,7 +60,11 @@ export default class VideosComponent extends React.Component {
                 prevEl: '.prevArrow'
             },
             on: {
-                reachEnd: () => console.log(this.state.videos)
+                reachEnd: () => {
+                    if (this.state.videos.length > 0) {
+                        console.log(this.state.videos)
+                    }
+                }
             },
             renderPrevButton: () => <a className={'nextArrow'} href="javascript:"><img
                 src="/src/static/img/arrow-right.png"/></a>,
