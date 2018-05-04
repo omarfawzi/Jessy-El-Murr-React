@@ -16,6 +16,8 @@ export default class VideosComponent extends React.Component {
     componentDidMount() {
       videosService.prototype.initComponent().then(result => {
           this.setState({videos: result, loadMore: true});
+          this.swiper.slideNext();
+
       });
     }
 
@@ -92,7 +94,9 @@ export default class VideosComponent extends React.Component {
                                      className="videos-second-child"/>
                             </div>
                         </div>
-                        <Swiper className="row videos-opacity" {...params}>
+                        <Swiper className="row videos-opacity" ref={node => {
+                            if (node) this.swiper = node.swiper
+                        }} {...params} >
                             {this.renderVideos()}
                           </Swiper>
                         {this.renderLoader()}

@@ -71,7 +71,15 @@
     width: 52px;
 }
 
-.swiper-slide:nth-child(even) {
+.swiper-slide-active {
+    opacity: 1;
+}
+
+.swiper-slide-prev {
+    opacity: 0.5;
+}
+
+.swiper-slide-next {
     opacity: 0.5;
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Iframe from 'react-iframe'
+import ProgressiveImage from "react-progressive-image";
 
 export default class Videos extends React.Component {
 
@@ -10,17 +11,18 @@ export default class Videos extends React.Component {
     render() {
         return (
             <figure>
-                <Iframe url={this.props.video.link}
-                        width={437}
-                        height={300}
-                        display="initial"
-                        position="relative"
-                        allowFullScreen/>
-                {/*<ProgressiveImage src={this.props.video.preview}*/}
-                {/*placeholder='/src/static/img/loader.gif'>*/}
-                {/*{(src) => <img src={src} className="img-fluid videos-img"*/}
-                {/*alt='an image'/>}*/}
-                {/*</ProgressiveImage>*/}
+
+                <ProgressiveImage src={this.props.video.preview}
+                                  placeholder='/src/static/img/loader.gif'>
+                    {(src) =>
+                        <Iframe url={this.props.video.link}
+                                width={437}
+                                height={300}
+                                position="relative"
+
+                                allowFullScreen/>
+                    }
+                </ProgressiveImage>
                 <figcaption>
                     <div className="container container-opacity">
                         <h1 className="video-title">{this.props.video.title}</h1>
