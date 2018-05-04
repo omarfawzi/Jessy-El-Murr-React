@@ -3,7 +3,7 @@ import Videos from './videos';
 import StickViewMoreButton from "./stickViewMoreButton";
 import videosService from '../services/videosService';
 import Swiper from 'react-id-swiper';
-import params from '../config/sliderSettings';
+import params from '../config/videosSliderSettings';
 
 
 export default class VideosComponent extends React.Component {
