@@ -5,6 +5,7 @@ import VideosComponent from './videosComponent';
 import DailyTweetsComponent from './dailyTweetsComponent';
 import TestimonialsComponent from './testimonialsComponent';
 import BiographyComponent from './biographyComponent';
+import FooterComponent from './footerComponent';
 
 class App extends React.Component {
     render() {
@@ -16,6 +17,7 @@ class App extends React.Component {
                 <GuestsComponent/>
                 <DailyTweetsComponent/>
                 <TestimonialsComponent/>
+                <FooterComponent/>
             </div>
         );
     }

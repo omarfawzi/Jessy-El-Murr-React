@@ -16,8 +16,8 @@ export default class Videos extends React.Component {
                                   placeholder='/src/static/img/loader.gif'>
                     {(src) =>
                         <Iframe url={this.props.video.link}
-                                width={437}
-                                height={300}
+                                width={'437'}
+                                height={'300'}
                                 position="relative"
 
                                 allowFullScreen/>

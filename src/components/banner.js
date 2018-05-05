@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressiveImage from "react-progressive-image";
 
 export default class Banner extends React.Component {
     render() {
@@ -15,7 +16,10 @@ export default class Banner extends React.Component {
                             </p>
                         </div>
                         <div className="col-lg-6 d-flex align-self-end img-right">
-                            <img className="img-fluid header-banner" src={this.props.photo} alt=""/>
+                            <ProgressiveImage src={this.props.photo}
+                                              placeholder='/src/static/img/loader.gif'>
+                                {(src) => <img className="img-fluid header-banner" src={src} alt=""/>}
+                            </ProgressiveImage>
                         </div>
                     </div>
                 </div>

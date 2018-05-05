@@ -29,14 +29,14 @@ footer{
 }
 
 footer input {
-  width: 100% !important;
+    width: auto !important;
   height: 45px;
   border-radius: 22.5px;
   background-color: #ffffff;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.1);
   /*margin-left: 246%;*/
   /*margin-top: 34%;*/
-  text-transform: uppercase;
+    /*text-transform: uppercase;*/
   font-size: 18px;
 }
 
@@ -56,5 +56,5 @@ footer input {
   position: relative;
   cursor: pointer;
   background: linear-gradient(to bottom right, #4a62dc, #6c12d3);
-  left: -45%;
+    left: -39%;
 }
