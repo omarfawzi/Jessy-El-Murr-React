@@ -7,7 +7,7 @@ export default class testimonialsService extends Service {
     }
 
     init() {
-        this.limit = 3;
+        this.limit = 4;
         this.offset = 0;
         this.endpoint = '/testimonials/get';
     }

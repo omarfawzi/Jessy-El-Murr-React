@@ -1,4 +1,5 @@
 import React from 'react';
+import BannerComponent from './bannerComponent'
 import GuestsComponent from './guestsComponent';
 import VideosComponent from './videosComponent';
 import DailyTweetsComponent from './dailyTweetsComponent';
@@ -9,10 +10,11 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <VideosComponent/>
+                <BannerComponent/>
                 <BiographyComponent/>
-                <DailyTweetsComponent/>
+                <VideosComponent/>
                 <GuestsComponent/>
+                <DailyTweetsComponent/>
                 <TestimonialsComponent/>
             </div>
         );

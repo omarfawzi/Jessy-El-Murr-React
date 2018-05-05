@@ -2,18 +2,19 @@ import React from 'react';
 import Testimonials from './testimonials';
 import Swiper from 'react-id-swiper';
 import testimonialsService from '../services/testimonialsService';
+import WhiteLoader from "./whiteLoader";
 
 export default class TestimonialsComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {testimonials: [], isClicked: false};
+        this.state = {testimonials: [], isClicked: false, loadMore: false};
         testimonialsService.prototype.init();
     }
 
     componentDidMount() {
       testimonialsService.prototype.initComponent().then(result => {
-          this.setState({testimonials: result});
+          this.setState({testimonials: result, loadMore: true});
           this.goNext();
       });
     }
@@ -35,9 +36,21 @@ export default class TestimonialsComponent extends React.Component {
     }
 
     updateTestimonials() {
+        this.setState({loadMore: false});
         testimonialsService.prototype.updateComponent().then(result => {
-            this.setState({testimonials: this.state.testimonials.concat(result), isClicked: true});
+            this.setState({testimonials: this.state.testimonials.concat(result), isClicked: true, loadMore: true});
         });
+    }
+
+    renderLoader() {
+        if (this.state.loadMore === false) {
+            return (
+                <WhiteLoader/>
+            );
+        }
+        else {
+            return null;
+        }
     }
 
 
@@ -74,6 +87,7 @@ export default class TestimonialsComponent extends React.Component {
                         <Swiper {...params} ref={node => {if (node) this.swiper = node.swiper}} className="row testimonials-opacity">
                             {this.renderTestimonials()}
                         </Swiper>
+                        {this.renderLoader()}
                         <div className="testimonials-arrows">
                             <img style={{cursor: 'pointer'}} className="btn-floating btn-sm btn-fb mx-1"
                                  onClick={()=>this.goPrev()} src="/src/static/img/arrow-left.png"/>

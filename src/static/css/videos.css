@@ -46,6 +46,7 @@
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+    white-space: pre-wrap;
 
 }
 
@@ -104,7 +105,7 @@ figcaption {
     /* background: #000; */
     background-color: rgb(91, 62, 216, 0.5);
     /* background-color: #5b3ed8; */
-    width: 69%;
+    width: 85%;
     height: 93px;
     /* opacity: 0.5; */
 
@@ -119,7 +120,7 @@ figcaption {
 
 .video-img-second-child {
     position: absolute;
-    top: 49%;
+    top: 54%;
     left: 90.3%;
     width: 4%;
 }
