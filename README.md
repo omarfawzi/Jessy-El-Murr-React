@@ -7,4 +7,4 @@ Frontend-side built in ReactJs for the project : https://github.com/omarfawzi/Je
 4- npm install <br>
 5- npm start <br>
 # Design
-![alt text](https://i.imgur.com/D6O5H2d.jpg)
+![alt text](https://preview.ibb.co/nJcTM7/screencapture_localhost_9000_2018_05_05_18_00_28.png)
