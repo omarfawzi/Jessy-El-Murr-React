@@ -2,7 +2,6 @@ import React from 'react';
 import Testimonials from './testimonials';
 import Swiper from 'react-id-swiper';
 import testimonialsService from '../services/testimonialsService';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 export default class TestimonialsComponent extends React.Component {
 
@@ -15,6 +14,7 @@ export default class TestimonialsComponent extends React.Component {
     componentDidMount() {
       testimonialsService.prototype.initComponent().then(result => {
           this.setState({testimonials: result});
+          this.goNext();
       });
     }
 
@@ -53,7 +53,9 @@ export default class TestimonialsComponent extends React.Component {
                       this.updateTestimonials()
                   }
               }
-          }
+          },
+          autoHeight: false,
+          effect: 'coverflow'
         };
 
         return (
@@ -73,11 +75,11 @@ export default class TestimonialsComponent extends React.Component {
                             {this.renderTestimonials()}
                         </Swiper>
                         <div className="testimonials-arrows">
-                            <img  className="btn-floating btn-sm btn-fb mx-1"
-                            onClick={()=>this.goPrev()} src="/src/static/img/arrow-left.png"/>
+                            <img style={{cursor: 'pointer'}} className="btn-floating btn-sm btn-fb mx-1"
+                                 onClick={()=>this.goPrev()} src="/src/static/img/arrow-left.png"/>
 
-                            <img  className="btn-floating btn-sm btn-fb mx-1"
-                            onClick={()=>this.goNext()} src="/src/static/img/arrow-right.png"/>
+                            <img style={{cursor: 'pointer'}} className="btn-floating btn-sm btn-fb mx-1"
+                                 onClick={()=>this.goNext()} src="/src/static/img/arrow-right.png"/>
                         </div>
                     </div>
                 </div>

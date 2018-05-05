@@ -40,6 +40,7 @@ figure.snip1167 blockquote {
     margin: -50px 0 0;
     line-height: 1.6em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
 }
 
 figure.snip1167 blockquote:before,
@@ -117,7 +118,7 @@ figure.snip1167 .author h5 span {
     left: 45%;
     width: 47px !important;
     height: 44px;
-    top: 26%;
+    top: 21%;
 }
 
 .quote-second-child {
@@ -125,7 +126,7 @@ figure.snip1167 .author h5 span {
     left: 48%;
     width: 19px !important;
     height: 18px;
-    top: 31%;
+    top: 25%;
 }
 
 .Emma-Stone {
