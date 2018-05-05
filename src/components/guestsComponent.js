@@ -22,7 +22,7 @@ export default class GuestsComponent extends React.Component {
     renderButton() {
         if (this.state.isClicked === false) {
             return (
-                <ViewMoreButton onClick={this.updateGuests.bind(this)}/>
+                <ViewMoreButton css={"btn-lg guests_viewMoreButton border-0"} onClick={this.updateGuests.bind(this)}/>
             );
         }
         else {

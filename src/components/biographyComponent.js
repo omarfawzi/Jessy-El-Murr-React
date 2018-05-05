@@ -34,7 +34,7 @@ export default class biographyComponent extends React.Component {
     renderButton() {
         if (this.state.isClicked === false) {
             return (
-                <ViewMoreButton onClick={this.updateBiography.bind(this)}/>
+                <ViewMoreButton css={"btn-lg guests_viewMoreButton border-0"} onClick={this.updateBiography.bind(this)}/>
             );
         }
         else {
